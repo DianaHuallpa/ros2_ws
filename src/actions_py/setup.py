@@ -24,6 +24,8 @@ setup(
             "motor_server = actions_py.motor_server:main",
             "propeller_client = actions_py.propeller_client:main",
             "propeller_server = actions_py.propeller_server:main",
+            "relay_client = actions_py.relay_client:main",
+            "relay_server = actions_py.relay_server:main",
             "imu_reading = actions_py.imu_reading:main"
         ],
     },
