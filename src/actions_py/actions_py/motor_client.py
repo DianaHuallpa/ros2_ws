@@ -61,6 +61,7 @@ def get_user_input(stdscr, node):
 
     # Instructions
     stdscr.addstr("Press 'q' to quit, '0' to turn off motor, '1' to turn right, '2' to turn left.\n")
+    stdscr.addstr(" '3' to turn off relay, '4' to turn on relay.\n")
     stdscr.refresh()
 
     while True:
@@ -81,6 +82,14 @@ def get_user_input(stdscr, node):
         elif key == ord('2'):
             node.send_goal(2, 0.01)  # Send 'turn left' state
             stdscr.addstr("Motor turning left\n")
+
+        elif key == ord('3'):
+            node.send_goal(3, 0.01)  # Send 'turn right' state
+            stdscr.addstr("System turning off\n")
+        
+        elif key == ord('4'):
+            node.send_goal(4, 0.01)  # Send 'turn left' state
+            stdscr.addstr("System turning on\n")
 
         # Refresh the screen to show feedback
         stdscr.refresh()

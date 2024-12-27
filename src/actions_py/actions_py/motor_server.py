@@ -40,7 +40,7 @@ class MotorServerNode(Node):  # MODIFY NAME
         self.get_logger().info("Received a goal")
         
         # Validar la solicitud de objetivo
-        if not (0 <= goal_request.status <= 2):
+        if not (0 <= goal_request.status <= 4):
             self.get_logger().info("Rejecting the goal")
             return GoalResponse.REJECT
         
