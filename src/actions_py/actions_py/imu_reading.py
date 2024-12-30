@@ -29,8 +29,8 @@ class ImuReading(Node):
             qos_profile
         )
         
-        self.data_publisher1 = self.create_publisher(Vector3, 'orientation_deg', 10)
-        self.data_publisher2 = self.create_publisher(Vector3, 'angular_speed', 10)
+        self.data_publisher1 = self.create_publisher(Vector3, 'orientation_IMU', 10)
+        self.data_publisher2 = self.create_publisher(Vector3, 'angular_speed_IMU', 10)
 
         self.msg_orientacion = Vector3() 
         self.msg_velocidad_angular = Vector3() 
@@ -97,6 +97,8 @@ class ImuReading(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = ImuReading()
+    print("Node is publishing data...")
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

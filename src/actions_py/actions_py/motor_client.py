@@ -61,7 +61,7 @@ def get_user_input(stdscr, node):
 
     # Instructions
     stdscr.addstr("Press 'q' to quit, '0' to turn off motor, '1' to turn right, '2' to turn left.\n")
-    stdscr.addstr(" '3' to turn off relay, '4' to turn on relay.\n")
+    stdscr.addstr(" '3' to turn off System, '4' to turn on System.\n")
     stdscr.refresh()
 
     while True:
