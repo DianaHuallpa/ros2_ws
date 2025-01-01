@@ -61,7 +61,7 @@ class ImuReading(Node):
         #     pitch_rad = math.copysign(math.pi / 2.0, sinp)  # Evita errores numéricos
         # else:
         #     pitch_rad = math.asin(sinp)
-        cosp = 1.0 - 2.0 * (qy * qy + qz * qz)  # Componente adicional para desambiguar
+        cosp = 1.0 - 2.0 * (qy * qy + qx * qx)  # Componente adicional para desambiguar
         pitch_rad = math.atan2(sinp, cosp)
         
         # Yaw (rotación en el eje Z)
